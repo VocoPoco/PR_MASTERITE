@@ -3,11 +3,14 @@ from SERVICE.handleLogin import *
 from SERVICE.handleRegister import *
 
 
-class API():
+class API():    
     def __init__(self):
         self.login = handleLogin()
         self.register = handleRegister()
         
+        self.url_ping = [
+            path('api/ping', "ping", name='ping'),
+        ]
         self.url_register = [
             path('api/register/', self.register.register, name='register'),
         ]
