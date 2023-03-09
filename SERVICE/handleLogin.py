@@ -1,6 +1,9 @@
 from django.contrib.auth import authenticate, login
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
+import sys
+sys.path.append("..")
+from DB.DB import User
 
 class handleLogin():
     def __init__(self, request):
