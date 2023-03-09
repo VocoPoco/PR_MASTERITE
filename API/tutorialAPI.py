@@ -1,6 +1,6 @@
 from django.urls import path
-from Tutorial.tutorialCreate import *
-from Tutorial.tutorialEdit import *
+from Tutorial.tutorialCreatePostRequest import *
+from Tutorial.tutorialEditPostRequest import *
 
 
 class API():
@@ -9,7 +9,7 @@ class API():
         self.tutorial_edit = TutorialEdit()
         
         self.url_ping = [
-            path('api/ping', "ping", name='ping'),
+            path('api/ping', self.ping, name='ping'),
         ]
         self.url_edit = [
             path('api/tutorial_edit', self.tutorial_edit, name='tutorial_edit')
@@ -18,3 +18,6 @@ class API():
         self.url_create = [
             path('api/tutorial_create', self.tutorial_create, name='tutorial_create')
         ]
+
+    def ping(self):
+        return JsonResponse({'message': 'pong'})
