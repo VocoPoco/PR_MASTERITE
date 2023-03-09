@@ -3,12 +3,13 @@ from django.http import JsonResponse
 from rest_framework.decorators import action
 from rest_framework.response import Response
 from rest_framework.viewsets import ModelViewSet
-from import Tutorial
+from Tutorial.tutorial import Tutorial
+from Tutorial.tutorialSerializer import TutorialSerializer
 
 
 class TutorialForm(ModelForm):
-    class Meta:
-        model = Tutorial
+    class Meta():
+        model = Tutorial()
         fields = ['name', 'level', 'description', 'order']
 
 
