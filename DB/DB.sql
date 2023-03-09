@@ -36,7 +36,3 @@ ALTER TABLE `Progress` ADD CONSTRAINT `Progress_fk0` FOREIGN KEY (`user_id`) REF
 ALTER TABLE `Progress` ADD CONSTRAINT `Progress_fk1` FOREIGN KEY (`tutorial_id`) REFERENCES `Tutorial`(`id`);
 
 ALTER TABLE `tutorial_steps` ADD CONSTRAINT `tutorial_steps_fk0` FOREIGN KEY (`tutorial_id`) REFERENCES `Tutorial`(`id`);
-
-
-
-
