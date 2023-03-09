@@ -1,6 +1,6 @@
 from django.urls import path
-from SERVICE.handleLogin import *
-from SERVICE.handleRegister import *
+from SERVICE.loginPostRequest import *
+from SERVICE.registerPostRequest import *
 
 
 class API():    
