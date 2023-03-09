@@ -48,7 +48,7 @@ def register(request):
     cnx.commit()
 
     user = authenticate(request, email=email, password=password)
-
+# TO DO: Check if the "type" is 1 and if yes enter the admin interface (needs an admin interface to be created) 
     if user is not None:
         login(request, user)
         serializer = UserSerializer(user)
