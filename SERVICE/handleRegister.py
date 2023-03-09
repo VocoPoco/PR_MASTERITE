@@ -2,6 +2,11 @@ from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
+import sys
+import mysql.connector
+
+sys.path.append("../DB")
+from DB import User
 
 
 class handleRegister():
@@ -11,12 +16,19 @@ class handleRegister():
     @csrf_exempt
     def register(self):
         if self.request.method == 'POST':
-            form = UserCreationForm(self.request.POST)
-            if form.is_valid():
-                user = form.save()
-                login(self.request, user)
-                return JsonResponse({'message': 'User registered and logged in successfully'})
-            else:
-                return JsonResponse({'message': 'Error registering user'}, status=400)
+            first = self.request.POST.get('first', '')
+            last = self.request.POST.get('last', '')
+            email = self.request.POST.get('email', '')
+            password = self.request.POST.get('password', '')
+            
+            cnx = mysql.connector.connect(user='root', host='127.0.0.0', database='User')
+            cursor = cnx.cursor()
+            insert_query = "INSERT INTO User SET first = %s, last  = %s, email = %s, password = %s"
+            cursor.execute(insert_query, (first, last, email, password))
+            user = cursor.fetchone()
 
-        return JsonResponse({'message': 'Invalid request method'}, status=405)
+            login(self.request, user)
+            
+            return JsonResponse({'email': user.email})
+        else:
+            return JsonResponse({'message': 'Invalid request method'}, status=405)
