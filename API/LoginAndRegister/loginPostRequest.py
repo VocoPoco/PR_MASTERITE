@@ -5,7 +5,7 @@ import mysql.connector
 
 
 
-class Login:
+class Login():
     def __init__(self):
         self.request = None
 
