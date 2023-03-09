@@ -15,9 +15,9 @@ def user_edit(request):
         email = request.POST.get('email', '')
         password = request.POST.get('password', '')
 
-        cnx = mysql.connector.connect(user='root', host='localhost', database='Tutorial')
+        cnx = mysql.connector.connect(user='root', host='localhost', database='User')
         cursor = cnx.cursor()
-        update_query = "UPDATE Tutorial SET first = %s, last = %s, email = %s, password = %s WHERE id = %s"
+        update_query = "UPDATE User SET first = %s, last = %s, email = %s, password = %s WHERE id = %s"
         cursor.execute(update_query, (first, last, email, password))
         cnx.commit()
 

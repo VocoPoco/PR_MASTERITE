@@ -6,7 +6,7 @@ import mysql.connector
 from LoginAndRegister.userSerializer import UserSerializer
 
 @api_view(['GET'])
-def ping():
+def ping(request):
     return JsonResponse({'message': 'pong'})
 
 @api_view(['POST'])
@@ -15,7 +15,7 @@ def login(request):
     email = request.data.get('email', '')
     password = request.data.get('password', '')
 
-    cnx = mysql.connector.connect(user='root', host='127.0.0.0', database='User')
+    cnx = mysql.connector.connect(user='root', host='localhost', database='User')
     cursor = cnx.cursor()
     select_query = "SELECT * FROM User WHERE email = %s AND password = %s"
     cursor.execute(select_query, (email, password))
@@ -46,18 +46,17 @@ def register(request):
     email = request.data.get('email', '')
     password = request.data.get('password', '')
 
-    cnx = mysql.connector.connect(user='root', host='127.0.0.0', database='User')
+    cnx = mysql.connector.connect(user='root', host='localhost', database='User')
     cursor = cnx.cursor()
     insert_query = "INSERT INTO User (first, last, email, password) VALUES (%s, %s, %s, %s)"
     cursor.execute(insert_query, (first, last, email, password))
     cnx.commit()
 
     user = authenticate(request, email=email, password=password)
-# TO DO: Check if the "type" is 1 and if yes enter the admin interface (needs an admin interface to be created) 
+    # TO DO: Check if the "type" is 1 and if yes enter the admin interface (needs an admin interface to be created) 
     if user is not None:
         login(request, user)
         serializer = UserSerializer(user)
-        return JsonResponse(serializer.data)
+        return JsonResponse({'data': serializer.data})
     else:
         return JsonResponse({'message': 'Invalid email or password'}, status=401)
-    

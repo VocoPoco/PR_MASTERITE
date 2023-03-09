@@ -18,5 +18,4 @@ class Paths():
                 # path('register/', self.progress.register , name='register'),
                 # path('register/', self.progress.register , name='register'),
                 # path('register/', self.progress.register , name='register'),
-
-]
+        ]
