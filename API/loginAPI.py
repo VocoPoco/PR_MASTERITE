@@ -1,22 +1,32 @@
-from django.urls import path
-from LoginAndRegister.loginPostRequest import *
-from LoginAndRegister.registerPostRequest import *
+from django.contrib.auth import authenticate, login
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+from rest_framework.decorators import api_view
+import mysql.connector
+from LoginAndRegister.userSerializer import UserSerializer
 
 
-class API():
-    def __init__(self):
-        self.login = Login()
-        self.register = Register()
+@api_view(['POST'])
+@csrf_exempt
+def register(request):
+    first = request.data.get('first', '')
+    last = request.data.get('last', '')
+    email = request.data.get('email', '')
+    password = request.data.get('password', '')
 
-        self.url_ping = [
-            path('api/ping', self.ping, name='ping'),
-        ]
-        self.url_register = [
-            path('api/register/', self.register.register, name='register'),
-        ]
-        self.url_login = [
-            path('api/login/', self.login.login, name='login'),
-        ]
+    cnx = mysql.connector.connect(user='root', host='127.0.0.0', database='User')
+    cursor = cnx.cursor()
+    insert_query = "INSERT INTO User (first, last, email, password) VALUES (%s, %s, %s, %s)"
+    cursor.execute(insert_query, (first, last, email, password))
+    cnx.commit()
 
-    def ping(self):
-        return JsonResponse({'message': 'pong'})
+    user = authenticate(request, email=email, password=password)
+
+    if user is not None:
+        login(request, user)
+        serializer = UserSerializer(user)
+        return JsonResponse(serializer.data)
+    else:
+        return JsonResponse({'message': 'Invalid email or password'}, status=401)
+    
+
