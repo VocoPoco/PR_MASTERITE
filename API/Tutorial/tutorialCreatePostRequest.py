@@ -25,3 +25,4 @@ class TutorialCreate():
                 return JsonResponse({'name': name})
             else:
                 return JsonResponse({'message': 'Invalid request method'}, status=405)
+        return register
