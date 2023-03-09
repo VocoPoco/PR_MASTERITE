@@ -4,6 +4,7 @@ CREATE TABLE `User` (
 	`last` varchar(255) NOT NULL,
 	`email` varchar(255) NOT NULL UNIQUE,
 	`password` varchar(255) NOT NULL,
+    `type` TINYINT(1) NOT NULL CHECK (`type` IN (0, 1)),
 	PRIMARY KEY (`id`)
 );
 
