@@ -5,9 +5,6 @@ from django.views.decorators.csrf import csrf_exempt
 import sys
 import mysql.connector
 
-sys.path.append("../DB")
-from DB import User
-
 
 class Register():
     def __init__(self, request):
