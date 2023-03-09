@@ -26,7 +26,12 @@ def login(request):
         if account_user is not None:
             login(request, account_user)
             serializer = UserSerializer(account_user)
-            return JsonResponse(serializer.data)
+            if user[5] == '1':
+                # admin interface
+                return JsonResponse({'message': 'Welcome to the admin interface', 'data': serializer.data})
+            else:
+                # normal interface
+                return JsonResponse({'message': 'Login successful', 'data': serializer.data})
         else:
             return JsonResponse({'message': 'Invalid login credentials'}, status=400)
     else:
