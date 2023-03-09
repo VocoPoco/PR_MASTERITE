@@ -60,3 +60,4 @@ def register(request):
         return JsonResponse(serializer.data)
     else:
         return JsonResponse({'message': 'Invalid email or password'}, status=401)
+    

@@ -1,16 +1,14 @@
 from rest_framework.decorators import api_view
-from rest_framework.response import Response
 from django.http import JsonResponse
 import mysql.connector
-from Tutorial.tutorial import Tutorial
 
 
 @api_view(['GET'])
 def ping():
-    return JsonResponse({'message': 'bong'})
+    return JsonResponse({'message': 'cong'})
 
 @api_view(['POST'])
-def tutorial_edit(request):
+def user_edit(request):
     if request.method == 'POST':
         first = request.POST.get('first', '')
         last = request.POST.get('last', '')
