@@ -9,7 +9,7 @@ class API():
         self.register = Register()
 
         self.url_ping = [
-            path('api/ping', "ping", name='ping'),
+            path('api/ping', self.ping, name='ping'),
         ]
         self.url_register = [
             path('api/register/', self.register.register, name='register'),
@@ -17,3 +17,6 @@ class API():
         self.url_login = [
             path('api/login/', self.login.login, name='login'),
         ]
+
+    def ping(self):
+        return JsonResponse({'message': 'pong'})
