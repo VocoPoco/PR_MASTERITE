@@ -4,6 +4,7 @@ CREATE TABLE `User` (
 	`last` varchar(255) NOT NULL,
 	`email` varchar(255) NOT NULL UNIQUE,
 	`password` varchar(255) NOT NULL,
+    `type` TINYINT(1) NOT NULL CHECK (`type` IN (0, 1)),
 	PRIMARY KEY (`id`)
 );
 
@@ -36,7 +37,3 @@ ALTER TABLE `Progress` ADD CONSTRAINT `Progress_fk0` FOREIGN KEY (`user_id`) REF
 ALTER TABLE `Progress` ADD CONSTRAINT `Progress_fk1` FOREIGN KEY (`tutorial_id`) REFERENCES `Tutorial`(`id`);
 
 ALTER TABLE `tutorial_steps` ADD CONSTRAINT `tutorial_steps_fk0` FOREIGN KEY (`tutorial_id`) REFERENCES `Tutorial`(`id`);
-
-
-
-
