@@ -1,13 +1,13 @@
 from django.urls import path
-from SERVICE.loginPostRequest import *
-from SERVICE.registerPostRequest import *
+from LoginAndRegister.loginPostRequest import *
+from LoginAndRegister.registerPostRequest import *
 
 
-class API():    
+class API():
     def __init__(self):
-        self.login = handleLogin()
-        self.register = handleRegister()
-        
+        self.login = Login()
+        self.register = Register()
+
         self.url_ping = [
             path('api/ping', "ping", name='ping'),
         ]
