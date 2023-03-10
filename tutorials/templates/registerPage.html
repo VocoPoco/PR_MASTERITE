@@ -1,28 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-
     <title>CyberSecT</title>
     <link rel="icon" href="Images/Logo.png">
-    <link rel="stylesheet" href="registerPage.css">
+    {% load static %}
+    <!-- <link rel="stylesheet" href="{% static 'tutorials/registerPage.css' %}"> -->
+
     <style>
-      .center-button {
-    
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: block;
-    width: 281px;
-    height: 60px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    background-color: #333333;
-    color:rgb(255, 255, 255);
-    font-size: 25px;
-    border: #333333;
-    border-radius: 5px;
-}   
+
+.main {
+  width: 100%;
+}
+
+br {
+  display: none;
+}
 
 .corner-buttons {
     position: absolute;
@@ -46,15 +38,14 @@
     height: 100vh;
 }
 .centered-div {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 350px;
-    height: 400px;
     background-color: rgb(255, 255, 255);
     border-radius: 15px;
+    width: 450px;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    padding: 20px 10px;
 }
 
 .top-bar {
@@ -80,28 +71,96 @@
     border-radius: 5px;
     border-width: 1px;
 }
+
+/* Style for form label */
+label {
+  display: block;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.form{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* Style for form input */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.form label {
+  text-align: left;
+  padding-bottom: 5px;
+}
+
+/* Style for hidden CSRF token input */
+input[type="hidden"] {
+  display: none;
+}
+
+/* Style for form help text */
+.helptext {
+  display: block;
+  margin-top: 5px;
+  font-style: italic;
+  font-size: 12px;
+  color: #777;
+}
+
+/* Style for form submit button */
+button[type="submit"] {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Style for form submit button on hover */
+button[type="submit"]:hover {
+  background-color: #0069d9;
+}
+
     </style>
   </head>
   <body style="background-color: #333333">
 
     <div>
-
         <div class="top-bar"></div>
-
-        <div class="centered-div" class="container">
-            
-          <input type="text" class="text-field" placeholder="Enter First Name", size="30">
-          <input type="text" class="text-field" style="margin-top: 10px;" placeholder="Enter Last Name", size="30">
-          <input type="text" class="text-field" style="margin-top: 10px;" placeholder="Enter Email", size="30">
-          <input type="password" class="pass-field" placeholder="Enter Password" size="30">
-          <a href="homePage.html"><button class="center-button" id="myButton">Sign Up</button></a>
-
-        </div>
-      
+        <section class="main">
+          <div class="centered-div" class="container">
+            {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            <h1>Register</h1>
+            <form class="form" method="POST">
+              {% csrf_token %}
+              {{ register_form}}                    
+              <button class="btn btn-primary" type="submit">Register</button>
+            </form>
+          </div>
+        </section>
         <div class="corner-buttons">
-
             <a href="loginPage.html"><button>Sign In</button></a>
-
         </div>
     </div>
 

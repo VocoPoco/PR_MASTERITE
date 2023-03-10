@@ -52,6 +52,12 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'mysite.urls'
 
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    ("tutorials\static\\tutorials")
+]
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
