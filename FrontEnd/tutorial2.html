@@ -22,7 +22,12 @@
         <div id="left-side-top">
             <div class="container" id="profile-pic-wrapper">
               <a href="profilepage.html" style="position: relative;"><img id="profile-pic" src="Images/SEXBOMB.jpg" alt="Profile Pic"></a>
-              <div class="overlay"></div>
+              
+			  <div id="progress-bar-container">
+				<div id="progress-bar"></div>
+			  </div>
+			  <h2 style="font-size: small;">Tutorial progress: %</h2>
+			  <div class="overlay"></div>
 
                 <div id="info">
                     <h2>Info</h2>
@@ -50,5 +55,10 @@
     </div>
 
     </div>
+	<script>
+		const progressBar = document.getElementById('progress-bar');
+		const progress = 75; 
+		progressBar.style.width = `${progress}%`;
+		</script>
 </body>
 </html>
