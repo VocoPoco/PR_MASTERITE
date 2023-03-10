@@ -33,6 +33,7 @@
 			position: relative;
 			width: 200px;
 			height: 200px;
+			border-radius: 100%;
 		}
 		.top-bar {
 		height: 60px;
@@ -51,7 +52,8 @@
 			background-color: rgba(0,0,0,0.5);
 			opacity: 0;
 			transition: opacity 0.3s ease;
-		border-radius: 100%;
+			border-radius: 100%;
+			
 		}
 		.container:hover .overlay {
 			opacity: 1;
@@ -68,13 +70,15 @@
 			font-family: Arial, sans-serif;
 		}
 		#left-side {
-  			display: flex;
+			display: flex;
 			flex-direction: column;
-			align-items: center;
-			justify-content: center;
 			width: 25%;
-			padding: 20px;
+			justify-content: center;
+			align-items: center;
+			padding-top: 20px;
+			padding-left: 20px;
 			background-color: #36393F;
+			margin-top: 60px;
 		}
 		#left-side img {
 			border-radius: 50%;
@@ -82,6 +86,7 @@
 			height: 200px;
 			object-fit: cover;
 			margin-bottom: 20px;
+			
 		}
 		#left-side-top {
 			flex: 1;
@@ -109,7 +114,7 @@
 			display: flex;
 			flex-direction: column;
 			width: 75%;
-			padding: 20px;
+			padding: 0px;
 			background-color: #ffffff;
 		}
 		#info {
@@ -163,6 +168,17 @@
 	</style>
 </head>
 <body>
+	<div class="top-bar">
+		<div class="corner-buttons">
+
+		  <a href="homePage.html"><button  style="background-color: #6060A1;">Home</button></a>
+		  <a href="tutorial1.html"><button>Tutorial 1</button></a>
+		  <a href="tutorial2.html"><button>Tutorial 2</button></a>
+		  <a href="tutorial3.html"><button>Tutorial 3</button></a>
+
+	  </div>
+
+	</div>
 	<div id="left-side">
 		<div id="left-side-top">
 			
@@ -170,10 +186,12 @@
 				
             <div style="border-radius: 100%;" onclick="window.location='profilePage.html'" class="container">
 				<img src="images/download.jpg" alt="">
+				<div class="overlay"></div>
+				
 				<div id="progress-bar-container">
 					<div id="progress-bar"></div>
 				  </div>
-				<div class="overlay"></div>
+				
 
   
 				  
@@ -195,17 +213,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="top-bar">
-		<div class="corner-buttons">
-
-		  <a href="homePage.html"><button  style="background-color: #6060A1;">Home</button></a>
-		  <a href="tutorial1.html"><button>Tutorial 1</button></a>
-		  <a href="tutorial2.html"><button>Tutorial 2</button></a>
-		  <a href="tutorial3.html"><button>Tutorial 3</button></a>
-
-	  </div>
-
-	  </div>
+	
 	<div id="right-side">
 	</div>
 <script>
