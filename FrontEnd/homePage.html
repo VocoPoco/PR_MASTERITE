@@ -4,6 +4,33 @@
 	<title>CyberSecT</title>
     <link rel="icon" href="Images/Logo.png">
 	<style>
+		.corner-buttons {
+			position: absolute;
+			top: 10px;
+			left: 10px;
+		}	
+
+		.corner-buttons button {
+			display: inline-block;
+			width: 100px;
+			height: 40px;
+			margin-left: 10px;
+			background-color: #333333;
+			color:rgb(255, 255, 255);
+			border-radius: 5px;
+			border: #333333;
+		}
+
+		.top-bar {
+			height: 60px;
+			background-color: white;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+		}
+  
+
 		body {
 			margin: 0;
 			padding: 0;
@@ -91,7 +118,7 @@
 <body>
 	<div id="left-side">
 		<div id="left-side-top">
-            <img src="images/Corinna-Kopf-Poses-Naked-1-1024x1024.jpg" alt="">
+            <a href="profilepage.html"><img src="images/Corinna-Kopf-Poses-Naked-1-1024x1024.jpg" alt=""></a>
 			<a href="profilepage.html"><img src="images/download.jpg" alt=""></a>
 			
             <div id="info">
@@ -110,10 +137,21 @@
 			</div>
 		</div>
 	</div>
-	<div id="right-side">
+	<div class="top-bar">
+		<div class="corner-buttons">
+
+		  <a href="homePage.html"><button>Home</button></a>
+		  <a href="tutorial1.html"><button>Tutorial 1</button></a>
+		  <a href="tutorial2.html"><button>Tutorial 2</button></a>
+		  <a href="tutorial3.html"><button>Tutorial 3</button></a>
+
+	  </div>
+
+	  </div>
+	<!-- <div id="right-side">
 		<a href="tutorial1.html" class="tutorial-button" class="hover-button">Tutorial 1</a>
 		<a href="tutorial2.html" class="tutorial-button">Tutorial 2</a>
 		<a href="tutorial3.html" class="tutorial-button">Tutorial 3</a>
-	</div>
+	</div> -->
 </body>
 </html>
