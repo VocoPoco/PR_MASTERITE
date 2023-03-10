@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CyberSecT</title>
+    <link rel="icon" href="Images/Logo.png">
+	<style>
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+#left-side {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  padding: 20px;
+  background-color: #333333;
+}
+
+#left-side-top {
+  position: relative;
+}
+
+#profile-pic-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+#profile-pic {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  display: block;
+}
+
+#info {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  padding: 10px;
+  background-color: #333333;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+#profile-pic-wrapper:hover #info {
+  opacity: 1;
+}
+
+#left-side-bottom {
+  display: block;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30vh;
+}
+
+#tutorial-steps {
+  background-color: #123f;
+  padding: 150px;
+}
+
+#tutorial-steps h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+#tutorial-steps p {
+  margin: 0;
+  line-height: 1.5;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.tutorial-button {
+  background-color: #333333;
+  color: #ffffff;
+  padding: 10px;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+#right-side {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+        
+	</style>
+</head>
+<body>
+	<div id="left-side">
+        <div id="left-side-top">
+            <div id="profile-pic-wrapper">
+                <img id="profile-pic" src="Images/SEXBOMB.jpg" alt="Profile Pic">
+                <div id="info">
+                    <h2>Info</h2>
+                    <p>Name: Corinna Koprf</p>
+                    <p>Age: 30</p>
+                    <p>Address: 123 Main St</p>
+                    <p>Email: john@example.com</p>
+                </div>
+            </div>
+        </div>
+        <div id="left-side-bottom">
+            <div id="tutorial-steps">
+                <h2>Tutorial Steps</h2>
+                <p>Open hjbhbhhhhhhhhhhhhhhhhhhhhhhh</p>
+            </div>
+        </div>
+    </div>
+    
+	<div id="right-side">
+		<a href="tutorial1.html" class="tutorial-button">Tutorial 1</a>
+		<a href="tutorial2.html" class="tutorial-button">Tutorial 2</a>
+		<a href="homePage.html" class="tutorial-button">Home Page</a>
+	</div>
+	<script>
+		// Get the profile pic and info elements
+		const profilePic = document.getElementById("profile-pic");
+		const info = document.getElementById("info");
+		
+		// Show the info when the user hovers over the profile pic
+		profilePic.addEventListener("mouseover", () => {
+  info.style.opacity = "1";
+});
+
+profilePic.addEventListener("mouseout", () => {
+  info.style.opacity = "0";
+});
+
+		

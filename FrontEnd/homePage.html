@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CyberSecT</title>
+    <link rel="icon" href="Images/Logo.png">
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			height: 100vh;
+			display: flex;
+			flex-direction: row;
+			background-color: #1a1a1a;
+			color: #ffffff;
+			font-family: Arial, sans-serif;
+		}
+		#left-side {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			width: 40%;
+			padding: 20px;
+			background-color: #333333;
+		}
+		#left-side img {
+			border-radius: 50%;
+			width: 200px;
+			height: 200px;
+			object-fit: cover;
+			margin-bottom: 20px;
+		}
+		#left-side-top {
+			flex: 1;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+			margin-bottom: 20px;
+		}
+		#left-side-bottom {
+			flex: 1;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+		}
+		#right-side {
+			display: flex;
+			flex-direction: column;
+			width: 60%;
+			padding: 20px;
+			background-color: #ffffff;
+		}
+		#info {
+			background-color: #333333;
+			padding: 20px;
+			margin-bottom: 20px;
+			opacity: 0;
+			transition: opacity 0.5s ease;
+		}
+		#left-side:hover #info {
+			opacity: 1;
+		}
+		#info h2 {
+			margin: 0;
+			font-size: 24px;
+			font-weight: bold;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			margin-bottom: 10px;
+		}
+		#info p {
+			margin: 0;
+			line-height: 1.5;
+			font-size: 16px;
+			margin-bottom: 10px;
+		}
+		.tutorial-button {
+			background-color: #333333;
+			color: #ffffff;
+			padding: 10px;
+			margin-bottom: 10px;
+			text-decoration: none;
+		}
+		.hover-button:hover {
+			background-color: #f67;
+		}
+	</style>
+</head>
+<body>
+	<div id="left-side">
+		<div id="left-side-top">
+            <img src="images/Corinna-Kopf-Poses-Naked-1-1024x1024.jpg" alt="">
+			<img src="images/download.jpg" alt="">
+			
+            <div id="info">
+				<h2>Info</h2>
+				<p>Name: John Doe</p>
+				<p>Age: 30</p>
+				<p>Address: 123 Main St</p>
+				<p>Email: john@example.com</p>
+			</div>
+		</div>
+		<div id="left-side-bottom">
+			<div id="info">
+
+				<h2>Sub-Info</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod nibh et dui vestibulum, vitae cursus ante pretium.</p>
+			</div>
+		</div>
+	</div>
+	<div id="right-side">
+		<a href="tutorial1.html" class="tutorial-button" class="hover-button">Tutorial 1</a>
+		<a href="tutorial2.html" class="tutorial-button">Tutorial 2</a>
+		<a href="tutorial3.html" class="tutorial-button">Tutorial 3</a>
+	</div>
+</body>
+</html>
