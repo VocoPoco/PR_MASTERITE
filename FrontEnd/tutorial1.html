@@ -46,7 +46,10 @@
             background-color: #ffffff;
 		}
 		#right-side {
-			display: flex;
+			display: block;
+			position: absolute;
+    		right: 0px;
+			top: 0px;
 			flex-direction: column;
 			width: 60%;
 			padding: 20px;
@@ -83,10 +86,47 @@
 			margin-bottom: 10px;
 			text-decoration: none;
 		}
+		.corner-buttons {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+	}
+
+	.corner-buttons button {
+		display: inline-block;
+		width: 100px;
+		height: 40px;
+		margin-left: 10px;
+		background-color: #333333;
+		color:rgb(255, 255, 255);
+		border-radius: 5px;
+		border: #333333;
+	}
+
+	.top-bar {
+		height: 60px;
+		background-color: white;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+	}
+  
 	</style>
 </head>
 <body>
-	<div id="left-side">
+
+	<div class="top-bar">
+		<div class="corner-buttons">
+
+		  <a href="homePage.html"><button>Home</button></a>
+		  <a href="tutorial1.html"><button>Tutorial 1</button></a>
+		  <a href="tutorial2.html"><button>Tutorial 2</button></a>
+		  <a href="tutorial3.html"><button>Tutorial 3</button></a>
+
+	  	</div>
+	</div>
+	<div id="left-side" style="margin-top: 60px;">
 		<div id="left-side-top">
 			<a href="profilepage.html"><img src="images/img_avatar.png" alt="Profile Pic"></a>
 
@@ -106,10 +146,8 @@
 			</div>
 		</div>
 	</div>
-	<div id="right-side">
-		<a href="homePage.html" class="tutorial-button">Home Page</a>
-		<a href="tutorial2.html" class="tutorial-button">Tutorial 2</a>
-		<a href="tutorial3.html" class="tutorial-button">Tutorial 3</a>
+	<div id="right-side" style="margin-top: 60px;">
+
 	</div>
 </body>
 </html>
