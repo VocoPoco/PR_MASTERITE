@@ -4,140 +4,157 @@
 	<title>CyberSecT</title>
     <link rel="icon" href="Images/Logo.png">
 	<style>
-		body {
-			margin: 0;
-			padding: 0;
-			height: 100vh;
-			display: flex;
-			flex-direction: row;
-			background-color: #1a1a1a;
-			color: #ffffff;
-			font-family: Arial, sans-serif;
-		}
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+}
 
-		#left-side {
-			display: flex;
-			flex-direction: column;
-			width: 40%;
-			padding: 20px;
-			background-color: #36393F;
-		}
+#left-side {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  padding: 20px;
+  background-color: #36393F;
+}
 
-		#left-side-top {
+#left-side-top {
+  position: relative;
+}
+
+#profile-pic-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+#profile-pic {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  display: block;
+}
+
+#info {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  padding: 10px;
+  background-color: #333333;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+#profile-pic-wrapper:hover #info {
+  opacity: 0.5;
+}
+
+#left-side-bottom {
+  display: block;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10vh;
+}
+
+#tutorial-steps {
+  background-color: #ffffff;
+  color: black;
+  padding: 25px;
+  border-radius: 15%;
+  text-align: left;
+}
+#tutorial-steps h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#tutorial-steps h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#tutorial-steps p {
+  margin: 0;
+  line-height: 1.5;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.tutorial-button {
+  background-color: #333333;
+  color: #ffffff;
+  padding: 10px;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+#right-side {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  padding: 0px;
+  background-color: #ffffff;
+}
+
+.corner-buttons {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.corner-buttons button {
+  display: inline-block;
+  width: 100px;
+  height: 40px;
+  margin-left: 10px;
+  background-color: #333333;
+  color:rgb(255, 255, 255);
+  border-radius: 5px;
+  border: #333333;
+}
+.container {
 			position: relative;
-		}
-
-		#profile-pic-wrapper {
-			position: relative;
-			display: inline-block;
-		}
-
-		#profile-pic {
-			border-radius: 50%;
 			width: 200px;
 			height: 200px;
-			object-fit: cover;
-			margin-bottom: 20px;
-			display: block;
 		}
-
-		#info {
-			position: absolute;
-			top: 0;
-			left: 100%;
-			padding: 10px;
-			background-color: #333333;
-			opacity: 0;
-			transition: opacity 0.5s ease;
-		}
-
-		#profile-pic-wrapper:hover #info {
-			opacity: 0.5;
-		}
-
-		#left-side-bottom {
-			display: block;
-			align-items: center;
-			justify-content: space-between;
-			margin-top: 10vh;
-		}
-
-		#tutorial-steps {
-			background-color: #ffffff;
-			color: black;
-			padding: 25px;
-			border-radius: 15%;
-			text-align: left;
-		}
-		#tutorial-steps h1 {
-			margin: 0;
-			font-size: 24px;
-			font-weight: bold;
-			text-transform: uppercase;
-			letter-spacing: 2px;
-			margin-bottom: 10px;
-			text-align: center;
-		}
-
-		#tutorial-steps h2 {
-			margin: 0;
-			font-size: 24px;
-			font-weight: bold;
-			text-transform: uppercase;
-			letter-spacing: 2px;
-			margin-bottom: 10px;
-			text-align: center;
-		}
-
-		#tutorial-steps p {
-			margin: 0;
-			line-height: 1.5;
-			font-size: 16px;
-			margin-bottom: 16px;
-		}
-
-		.tutorial-button {
-			background-color: #333333;
-			color: #ffffff;
-			padding: 10px;
-			margin-bottom: 10px;
-			text-decoration: none;
-		}
-
-		#right-side {
-			display: flex;
-			flex-direction: column;
-			width: 60%;
-			padding: 0px;
-			background-color: #ffffff;
-		}
-
-		.corner-buttons {
-			position: absolute;
-			top: 10px;
-			left: 10px;
-		}
-
-		.corner-buttons button {
-			display: inline-block;
-			width: 100px;
-			height: 40px;
-			margin-left: 10px;
-			background-color: #333333;
-			color:rgb(255, 255, 255);
-			border-radius: 5px;
-			border: #333333;
-		}
-
-		.top-bar {
-			height: 60px;
-			background-color: #1F2024;
-			position: fixed;
-			top: 0;
-			left: 0;
-			width: 100%;
-		}
-  
+.top-bar {
+  height: 60px;
+  background-color: #1F2024;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+	opacity: 0;
+	transition: opacity 0.3s ease;
+  border-radius: 100%;
+}
+.container:hover .overlay {
+	opacity: 1;
+}
   
 	</style>
 </head>
@@ -147,16 +164,18 @@
 		<div class="corner-buttons">
 
 		  <a href="homePage.html"><button>Home</button></a>
-		  <a href="tutorial1.html"><button style="background-color: #6060A1">Tutorial 1</button></a>
+		  <a href="tutorial1.html"><button>Tutorial 1</button></a>
 		  <a href="tutorial2.html"><button>Tutorial 2</button></a>
-		  <a href="tutorial3.html"><button>Tutorial 3</button></a>
+		  <a href="tutorial3.html"><button style="background-color: #6060A1;">Tutorial 3</button></a>
 
 	  </div>
   </div>
 	<div id="left-side" style="margin-top: 60px;">
         <div id="left-side-top">
-            <div id="profile-pic-wrapper">
-              <a href="profilepage.html"><img id="profile-pic" src="Images/SEXBOMB.jpg" alt="Profile Pic"></a>
+            <div class="container" id="profile-pic-wrapper">
+              <a href="profilepage.html" style="position: relative;"><img id="profile-pic" src="Images/SEXBOMB.jpg" alt="Profile Pic"></a>
+              <div class="overlay"></div>
+
                 <div id="info">
                     <h2>Info</h2>
                     <p>Name: Corinna Koprf</p>
@@ -176,7 +195,7 @@
     </div>
     
     <div id="right-side" style="margin-top: 60px;">
-		<iframe src="https://codepen.io/kapinoida/embed/OjmEGB?default-tab=result&theme-id=dark" style="border: none;width: 100%; height: 100%;">
+		<iframe src="tutorial2.html" style="border: none; width: 100%; height: 100%;">
 			
 		</iframe>
 

@@ -113,31 +113,48 @@ body {
 }
 
 .corner-buttons {
-    position: absolute;
-    top: 10px;
-    left: 10px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
 }
 
 .corner-buttons button {
-    display: inline-block;
-    width: 100px;
-    height: 40px;
-    margin-left: 10px;
-    background-color: #333333;
-    color:rgb(255, 255, 255);
-    border-radius: 5px;
-    border: #333333;
+  display: inline-block;
+  width: 100px;
+  height: 40px;
+  margin-left: 10px;
+  background-color: #333333;
+  color:rgb(255, 255, 255);
+  border-radius: 5px;
+  border: #333333;
 }
-
+.container {
+			position: relative;
+			width: 200px;
+			height: 200px;
+		}
 .top-bar {
-    height: 60px;
-    background-color: #1F2024;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+  height: 60px;
+  background-color: #1F2024;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
-  
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+	opacity: 0;
+	transition: opacity 0.3s ease;
+  border-radius: 100%;
+}
+.container:hover .overlay {
+	opacity: 1;
+}
   
 	</style>
 </head>
@@ -148,15 +165,17 @@ body {
 
 		  <a href="homePage.html"><button>Home</button></a>
 		  <a href="tutorial1.html"><button>Tutorial 1</button></a>
-		  <a href="tutorial2.html"><button style="background-color: #6060A1;">Tutorial 2</button></a>
-		  <a href="tutorial3.html"><button>Tutorial 3</button></a>
+		  <a href="tutorial2.html"><button>Tutorial 2</button></a>
+		  <a href="tutorial3.html"><button style="background-color: #6060A1;">Tutorial 3</button></a>
 
 	  </div>
   </div>
 	<div id="left-side" style="margin-top: 60px;">
         <div id="left-side-top">
-            <div id="profile-pic-wrapper">
-              <a href="profilepage.html"><img id="profile-pic" src="Images/SEXBOMB.jpg" alt="Profile Pic"></a>
+            <div class="container" id="profile-pic-wrapper">
+              <a href="profilepage.html" style="position: relative;"><img id="profile-pic" src="Images/SEXBOMB.jpg" alt="Profile Pic"></a>
+              <div class="overlay"></div>
+
                 <div id="info">
                     <h2>Info</h2>
                     <p>Name: Corinna Koprf</p>
