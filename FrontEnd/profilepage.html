@@ -15,19 +15,19 @@
 
         <div class="centered-div" class="container">
             <div style="position: relative;">
-                <input type="text" id="myInput" class="text-field" placeholder="Enter First Name", size="30" value="Some text here" readonly>
+                <input type="text" id="myInput" class="text-field" placeholder="Enter New First Name", size="30" value="Ivan" readonly>
                 <button class="edit-button" onclick="enableEdit()">
                     <img style="height: 29px; width: 30px;" src="Images/44843.png" alt="">
                 </button>
             </div>
             <div style="position: relative;">
-                <input type="text" style="margin-top: 0px;" id="myInput2" class="text-field" placeholder="Enter First Name", size="30" value="Some text here" readonly>
+                <input type="text" style="margin-top: 0px;" id="myInput2" class="text-field" placeholder="Enter New Second Name", size="30" value="Sirakov" readonly>
                 <button class="edit-button" style="margin-top: 0px;" onclick="enableEdit2()">
                     <img style="height: 29px; width: 30px;" src="Images/44843.png" alt="">
                 </button>
             </div>
             <div style="position: relative;">
-                <input type="text" id="myInput3" style="margin-top: 0px;" class="text-field" placeholder="Enter First Name", size="30" value="Some text here" readonly>
+                <input type="text" id="myInput3" style="margin-top: 0px;" class="text-field" placeholder="Enter New Email Adress", size="30" value="ivakasiraka69@gmail.com" readonly>
                 <button class="edit-button" style="margin-top: 0px;" onclick="enableEdit3()">
                     <img style="height: 29px; width: 30px;" src="Images/44843.png" alt="">
                 </button>
@@ -70,14 +70,18 @@
         function enableEdit() {
           var input = document.getElementById("myInput");
           input.removeAttribute("readonly");
+          input.style.border = "1px solid black";
         }
         function enableEdit2() {
           var input = document.getElementById("myInput2");
           input.removeAttribute("readonly");
+          input.style.border = "1px solid black";
         }
         function enableEdit3() {
           var input = document.getElementById("myInput3");
           input.removeAttribute("readonly");
+          input.style.border = "1px solid black";
+          input.style.marginTop = "39";
         }
 
     </script>
