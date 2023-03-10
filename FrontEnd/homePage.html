@@ -68,7 +68,7 @@
 			font-family: Arial, sans-serif;
 		}
 		#left-side {
-			display: flex;
+  			display: flex;
 			flex-direction: column;
 			align-items: center;
 			justify-content: center;
@@ -165,16 +165,19 @@
 <body>
 	<div id="left-side">
 		<div id="left-side-top">
-			<div onclick="window.location='profilePage.html'" class="container">
+			
 
+				
+            <div style="border-radius: 100%;" onclick="window.location='profilePage.html'" class="container">
 				<img src="images/download.jpg" alt="">
 				<div id="progress-bar-container">
 					<div id="progress-bar"></div>
 				  </div>
 				<div class="overlay"></div>
 
-			</div>
-            	
+  
+				  
+			  </div>
 			
             <div id="info">
 				<h2>Info</h2>
@@ -204,7 +207,6 @@
 
 	  </div>
 	<div id="right-side">
-		
 	</div>
 <script>
 	const progressBar = document.getElementById('progress-bar');
