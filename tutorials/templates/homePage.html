@@ -148,7 +148,7 @@
 			margin-bottom: 10px;
 			text-decoration: none;
 		}
-		#progress-bar-container {
+		/*#progress-bar-container {
   position: relative;
   width: 100%;
   height: 10px;
@@ -164,7 +164,28 @@
   width: 50%; 
   height: 100%;
   background-color: #4CAF50; 
+}*/
+.progress-container {
+  width: 50%;
+  margin: auto;
+  text-align: center;
 }
+
+.progress-bar {
+  height: 20px;
+  background-color: #4caf50;
+  width: 0%;
+  border-radius: 5px;
+}
+
+.progress-text {
+  margin-top: 10px;
+}
+
+#myProgressText {
+  font-weight: bold;
+}
+
 
 	</style>
 </head>
@@ -187,10 +208,15 @@
 				<img src="images/download.jpg" alt="">
 					<div class="overlay"></div>
 			</div>
-			<div id="progress-bar-container" style="text-align: center;">
-				<h2 style="font-size: small;position: relative; top: 15px;">Main progress: %</h2>
+			<!--<div id="progress-bar-container" style="text-align: center;">
+				<h2 style="font-size: small;position: relative; top: 15px;">Main progress: progress %</h2>
 				<div id="progress-bar" ></div>
-			</div>
+			</div>-->
+			<div class="progress-container">
+  <div class="progress-bar" id="myProgressBar"></div>
+  <div class="progress-text">Main progress bar <span id="myProgressText">0%</span></div>
+</div>
+
 		</div>
 		<div id="info">
 			<h2>Info</h2>
@@ -211,10 +237,38 @@
 	
 	<div id="right-side">
 	</div>
+	<!--
 <script>
 	const progressBar = document.getElementById('progress-bar');
 	const progress = 75; 
 	progressBar.style.width = `${progress}%`;
-	</script>
+	console.log(progress,"%");
+	</script>-->
+<script>
+	// Get the progress bar element
+const progressBar = document.getElementById("myProgressBar");
+// Get the progress text element
+const progressText = document.getElementById("myProgressText");
+
+// Set the initial progress to 0%
+let progress = 0;
+
+// Update the progress bar and progress text
+function updateProgress() {
+	progress = 50;
+//	while (progress <=99)
+ if("tutorial1.html" == progressFinished) progress =+ 33.3;
+ if("tutorial2.html" == progressFinished) progress =+ 33.3;
+ if("tutorial3.html" == progressFinished) progress =+ 33.3;
+ pass;
+  progressBar.style.width = progress + "%";
+  // Update the text of the progress text element
+  progressText.innerHTML = progress + "%";
+	
+}
+
+// Call the updateProgress function every second
+setInterval(updateProgress, 1000);
+</script>
 </body>
 </html>
