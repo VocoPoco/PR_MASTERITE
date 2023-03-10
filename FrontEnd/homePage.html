@@ -72,7 +72,7 @@
 			flex-direction: column;
 			align-items: center;
 			justify-content: center;
-			width: 40%;
+			width: 25%;
 			padding: 20px;
 			background-color: #36393F;
 		}
@@ -108,12 +108,11 @@
 		#right-side {
 			display: flex;
 			flex-direction: column;
-			width: 60%;
+			width: 75%;
 			padding: 20px;
 			background-color: #ffffff;
 		}
 		#info {
-			background-color: #333333;
 			padding: 20px;
 			margin-bottom: 20px;
 			opacity: 0;
@@ -143,6 +142,24 @@
 			margin-bottom: 10px;
 			text-decoration: none;
 		}
+		#progress-bar-container {
+  position: relative;
+  width: 100%;
+  height: 10px;
+  margin-top: 10px;
+  background-color: #333;
+}
+
+#progress-bar {
+	border-radius: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%; /* replace with the actual value */
+  height: 100%;
+  background-color: #4CAF50; /* replace with the color of your choice */
+}
+
 	</style>
 </head>
 <body>
@@ -151,6 +168,9 @@
 			<div onclick="window.location='profilePage.html'" class="container">
 
 				<img src="images/download.jpg" alt="">
+				<div id="progress-bar-container">
+					<div id="progress-bar"></div>
+				  </div>
 				<div class="overlay"></div>
 
 			</div>
@@ -184,9 +204,12 @@
 
 	  </div>
 	<div id="right-side">
-		<a href="tutorial1.html" class="tutorial-button" class="hover-button">Tutorial 1</a>
-		<a href="tutorial2.html" class="tutorial-button">Tutorial 2</a>
-		<a href="tutorial3.html" class="tutorial-button">Tutorial 3</a>
+		
 	</div>
+<script>
+	const progressBar = document.getElementById('progress-bar');
+	const progress = 75; // example value
+	progressBar.style.width = `${progress}%`;
+	</script>
 </body>
 </html>
