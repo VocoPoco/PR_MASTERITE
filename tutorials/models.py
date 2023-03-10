@@ -17,5 +17,6 @@ class Tutorial(models.Model):
 
     def __str__(self):
         return self.name
-# Progress
-#
+
+class Progress(models.Model):
+    progress = models.IntegerField()
