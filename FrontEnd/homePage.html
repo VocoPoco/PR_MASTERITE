@@ -29,7 +29,33 @@
 			left: 0;
 			width: 100%;
 		}
-  
+		.container {
+			position: relative;
+			width: 200px;
+			height: 200px;
+		}
+		.top-bar {
+		height: 60px;
+		background-color: #1F2024;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		}
+		.overlay {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0,0,0,0.5);
+			opacity: 0;
+			transition: opacity 0.3s ease;
+		border-radius: 100%;
+		}
+		.container:hover .overlay {
+			opacity: 1;
+		}
 
 		body {
 			margin: 0;
@@ -122,8 +148,13 @@
 <body>
 	<div id="left-side">
 		<div id="left-side-top">
-            <a href="profilepage.html"><img src="images/Corinna-Kopf-Poses-Naked-1-1024x1024.jpg" alt=""></a>
-			<a href="profilepage.html"><img src="images/download.jpg" alt=""></a>
+			<div onclick="window.location='profilePage.html'" class="container">
+
+				<a  style="position: relative;"><img src="images/download.jpg" alt=""></a>
+				<a  style="position: relative;"><div class="overlay"></div></a>
+
+			</div>
+            	
 			
             <div id="info">
 				<h2>Info</h2>
@@ -152,10 +183,10 @@
 	  </div>
 
 	  </div>
-	<!-- <div id="right-side">
+	<div id="right-side">
 		<a href="tutorial1.html" class="tutorial-button" class="hover-button">Tutorial 1</a>
 		<a href="tutorial2.html" class="tutorial-button">Tutorial 2</a>
 		<a href="tutorial3.html" class="tutorial-button">Tutorial 3</a>
-	</div> -->
+	</div>
 </body>
 </html>
