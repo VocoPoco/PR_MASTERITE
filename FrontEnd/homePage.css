@@ -4,5 +4,30 @@ body {
   background-color: #ffffff;
   box-shadow: 0 4px 8px rgba(185, 176, 176, 0.2), 0 6px 20px rgba(185, 173, 173, 0.233), inset 0px 0px 8px rgba(0,0,0,0.2);
   }
-  
+
+  .corner-buttons {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.corner-buttons button {
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    margin-left: 10px;
+    background-color: #333333;
+    color:rgb(255, 255, 255);
+    border-radius: 5px;
+    border: #333333;
+}
+
+.top-bar {
+    height: 60px;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
   
