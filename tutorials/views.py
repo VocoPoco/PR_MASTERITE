@@ -26,7 +26,7 @@ def login_request(request):
 			if user is not None:
 				login(request, user)
 				messages.info(request, f"You are now logged in as {username}.")
-				return redirect("home")
+				return redirect("dashboard")
 			else:
 				messages.error(request,"Invalid username or password.")
 		else:
@@ -47,6 +47,10 @@ def register_request(request):
 	return render (request=request, template_name="registerPage.html", context={"register_form":form})
 #   template = loader.get_template('registerPage.html')
 #   return HttpResponse(template.render())
+
+def dashboard_request(request):
+  template = loader.get_template('homePage.html')
+  return HttpResponse(template.render())
 
 def tutorial_1(request):
   template = loader.get_template('tutorial1.html')
