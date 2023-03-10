@@ -52,19 +52,31 @@ body {
 }
 
 #profile-pic-wrapper:hover #info {
-  opacity: 1;
+  opacity: 0.5;
 }
 
 #left-side-bottom {
   display: block;
   align-items: center;
   justify-content: space-between;
-  margin-top: 30vh;
+  margin-top: 10vh;
 }
 
 #tutorial-steps {
-  background-color: #123f;
-  padding: 150px;
+  background-color: #ffffff;
+  color: black;
+  padding: 25px;
+  border-radius: 15%;
+  text-align: left;
+}
+#tutorial-steps h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 #tutorial-steps h2 {
@@ -74,13 +86,14 @@ body {
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 #tutorial-steps p {
   margin: 0;
   line-height: 1.5;
   font-size: 16px;
-  margin-bottom: 10px;
+  margin-bottom: 16px;
 }
 
 .tutorial-button {
@@ -98,7 +111,6 @@ body {
   padding: 20px;
   background-color: #ffffff;
 }
-
         
 	</style>
 </head>
@@ -118,9 +130,10 @@ body {
         </div>
         <div id="left-side-bottom">
             <div id="tutorial-steps">
-                <h2>Tutorial Steps</h2>
-                <p>Open hjbhbhhhhhhhhhhhhhhhhhhhhhhh</p>
-            </div>
+              <h1>Header</h1>
+                <h2>Tutorial Steps:</h2>
+
+              </div>
         </div>
     </div>
     
@@ -128,19 +141,6 @@ body {
 		<a href="tutorial1.html" class="tutorial-button">Tutorial 1</a>
 		<a href="tutorial2.html" class="tutorial-button">Tutorial 2</a>
 		<a href="homePage.html" class="tutorial-button">Home Page</a>
-	</div>
-	<script>
-		// Get the profile pic and info elements
-		const profilePic = document.getElementById("profile-pic");
-		const info = document.getElementById("info");
-		
-		// Show the info when the user hovers over the profile pic
-		profilePic.addEventListener("mouseover", () => {
-  info.style.opacity = "1";
-});
-
-profilePic.addEventListener("mouseout", () => {
-  info.style.opacity = "0";
-});
-
-		
+    </div>
+    </body>
+    </html>
