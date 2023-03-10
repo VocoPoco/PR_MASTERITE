@@ -3,6 +3,7 @@
 <head>
 	<title>CyberSecT</title>
     <link rel="icon" href="Images/Logo.png">
+	<link rel="stylesheet" href="homePage.css">
 	<style>
 		.corner-buttons {
 			position: absolute;
@@ -144,7 +145,7 @@
 		}
 		#progress-bar-container {
   position: relative;
-  width: 100%;
+  width: 100px;
   height: 10px;
   margin-top: 10px;
   background-color: #333;
@@ -155,9 +156,9 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 50%; /* replace with the actual value */
+  width: 50%; 
   height: 100%;
-  background-color: #4CAF50; /* replace with the color of your choice */
+  background-color: #4CAF50; 
 }
 
 	</style>
@@ -165,27 +166,23 @@
 <body>
 	<div id="left-side">
 		<div id="left-side-top">
-			
-
-				
-            <div style="border-radius: 100%;" onclick="window.location='profilePage.html'" class="container">
+		<div>	
+			<div style="border-radius: 100%;" onclick="window.location='profilePage.html'" class="container">
 				<img src="images/download.jpg" alt="">
-				<div id="progress-bar-container">
-					<div id="progress-bar"></div>
-				  </div>
-				<div class="overlay"></div>
-
-  
-				  
-			  </div>
-			
-            <div id="info">
-				<h2>Info</h2>
-				<p>Name: John Doe</p>
-				<p>Age: 30</p>
-				<p>Address: 123 Main St</p>
-				<p>Email: john@example.com</p>
+					<div class="overlay"></div>
 			</div>
+			<div id="progress-bar-container">
+				<h2 style="font-size: small;">Main progress: %</h2>
+				<div id="progress-bar"></div>
+			</div>
+		</div>
+		<div id="info">
+			<h2>Info</h2>
+			<p>Name: John Doe</p>
+			<p>Age: 30</p>
+			<p>Address: 123 Main St</p>
+			<p>Email: john@example.com</p>
+		</div>
 		</div>
 		<div id="left-side-bottom">
 			<div id="info">
@@ -210,7 +207,7 @@
 	</div>
 <script>
 	const progressBar = document.getElementById('progress-bar');
-	const progress = 75; // example value
+	const progress = 75; 
 	progressBar.style.width = `${progress}%`;
 	</script>
 </body>
