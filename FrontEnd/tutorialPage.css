@@ -13,14 +13,22 @@ body {
     display: flex;
     flex-direction: column;
     width: 25%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
     padding-top: 20px;
     padding-left: 20px;
     background-color: #36393F;
   }
   
   #left-side-top {
-    position: relative;
-  }
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
   
   #profile-pic-wrapper {
     position: relative;
@@ -105,6 +113,13 @@ body {
     padding: 0px;
     background-color: #ffffff;
   }
+  #right-side {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    padding: 0px;
+    background-color: #ffffff;
+}
   
   .corner-buttons {
     position: absolute;
@@ -122,11 +137,7 @@ body {
     border-radius: 5px;
     border: none;
   }
-  .container {
-              position: relative;
-              width: 200px;
-              height: 200px;
-          }
+  
   .top-bar {
     height: 60px;
     background-color: #1F2024;
@@ -135,6 +146,12 @@ body {
     left: 0;
     width: 100%;
   }
+
+  .container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
   .overlay {
       position: absolute;
       top: 0;
