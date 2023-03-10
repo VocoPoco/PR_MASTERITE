@@ -1,0 +1,85 @@
+.center-button {
+    
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 281px;
+    height: 60px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #333333;
+    color:rgb(255, 255, 255);
+    font-size: 25px;
+    border: #333333;
+    border-radius: 5px;
+}   
+
+.corner-buttons {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+
+.corner-buttons button {
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    margin-left: 10px;
+    background-color: #333333;
+    color:rgb(255, 255, 255);
+    border-radius: 5px;
+    border: #333333;
+}
+
+.container {
+    position: relative;
+    height: 100vh;
+}
+.centered-div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 400px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    text-align: center;
+}
+
+.top-bar {
+    height: 60px;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .text-field {
+    font-size: 16px;
+    margin-top: 40px;
+    margin-bottom: 25px;
+    height: 30px;
+    border-radius: 5px;
+    border-width: 1px;
+  }
+.pass-field {
+    font-size: 16px;
+    height: 30px;
+    border-radius: 5px;
+    border-width: 1px;
+}
+
+.edit-button {
+    position: absolute;
+    right: 0; 
+    margin-top: 40px;
+    border-color: white;
+    background-color: white;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
