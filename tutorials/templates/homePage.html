@@ -6,17 +6,15 @@
     <link rel="stylesheet" href="homePage.css">
   </head>
   <body>
-    <div class="top-bar">
-      <div class="corner-buttons">
-        <button onclick="changeIframeSrc('homePage.html')">Home</button>
-        <button onclick="changeIframeSrc('tutorial1.html')">Tutorial 1</button>
-        <button onclick="changeIframeSrc('tutorial2.html')">Tutorial 2</button>
-        <button onclick="changeIframeSrc('tutorial3.html')">Tutorial 3</button>
-		<button onclick="changeIframeSrc('Malware.html')">Malware training</button>
-        <button onclick="changeIframeSrc('')"></button>
-        <button onclick="changeIframeSrc('')"></button>
-      </div>
-    </div>
+    <div class="corner-buttons">
+		<button onclick="changeIframeSrc('Introduction.html')" style="margin-right: 10px">Home</button>
+		<button onclick="changeIframeSrc('tutorial1.html')" style="margin-right: 10px">Урок 1</button>
+		<button onclick="changeIframeSrc('tutorial2.html')" style="margin-right: 10px">Урок 2</button>
+		<button onclick="changeIframeSrc('phishing.html')" style="margin-right: 10px">Фишинг</button>
+		<button onclick="changeIframeSrc('Malware.html')" style="margin-right: 10px">Зловредни атаки</button>
+		<button onclick="changeIframeSrc('')" style="margin-right: 10px"></button>
+	  </div>
+	  
     <div id="left-side">
       <div id="left-side-top">
         <div>
@@ -31,7 +29,7 @@
         </div>
         <div id="info">
           <h2>Info</h2>
-          <p>Name: John Doe</p>
+          <p>Name: Петър Тошев</p>
           <p>Age: 30</p>
           <p>Address: 123 Main St</p>
           <p>Email: john@example.com</p>
@@ -45,7 +43,7 @@
       </div>
     </div>
     <div id="right-side">
-      <iframe id="myIframe" src="homePage.html" frameborder="0"></iframe>
+      <iframe id="myIframe" src="Introduction.html" frameborder="0"></iframe>
     </div>
     <script>
       const progressBar = document.getElementById('progress-bar');
