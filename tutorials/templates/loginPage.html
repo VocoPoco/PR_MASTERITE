@@ -6,95 +6,164 @@
     <link rel="icon" href="Images/Logo.png">
     <link rel="stylesheet" href="loginPage.css">
     <style>
-      .center-button {
-    
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: block;
-    width: 281px;
-    height: 60px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    background-color: #333333;
-    border: 1px #333333;
-    color:rgb(255, 255, 255);
-    font-size: 25px;
-    border-radius: 5px;
-}   
 
-.corner-buttons {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-}
-
-.corner-buttons button {
-    display: inline-block;
-    width: 100px;
-    height: 40px;
-    margin-left: 10px;
-    background-color: #333333;
-    color:rgb(255, 255, 255);
-    border: 1px #333333;
-    border-radius: 5px;
-}
-
-.container {
-    position: relative;
-    height: 100vh;
-}
-.centered-div {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 350px;
-    height: 250px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 15px;
-    text-align: center;
-}
-
-.top-bar {
-    height: 60px;
-    background-color: white;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-  }
-
-.text-field {
-    font-size: 16px;
-    margin-top: 40px;
-    margin-bottom: 25px;
-    height: 30px;
-    border-radius: 5px;
-    border-width: 1px;
-  }
-.pass-field {
-    font-size: 16px;
-    height: 30px;
-    border-radius: 5px;
-    border-width: 1px;
-}
-    </style>
+      .main {
+        width: 100%;
+      }
+      
+      br {
+        display: none;
+      }
+      body {
+        font-family: Arial, sans-serif;
+      }
+      
+      .corner-buttons {
+          position: absolute;
+          top: 10px;
+          right: 20px;
+      }
+      
+      .corner-buttons button {
+          display: inline-block;
+          width: 100px;
+          height: 40px;
+          margin-left: 10px;
+          background-color: #36393F;
+          color:rgb(255, 255, 255);
+          border-radius: 5px;
+          border: #36393F;
+      }
+      
+      .container {
+          position: relative;
+          height: 100vh;
+      }
+      .centered-div {
+          background-color: rgb(255, 255, 255);
+          border-radius: 15px;
+          width: 450px;
+          text-align: center;
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: 100px;
+          padding: 20px 10px;
+      }
+      
+      .top-bar {
+          height: 60px;
+          background-color: #1F2024;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+        }
+      
+        .text-field {
+          font-size: 16px;
+          margin-top: 40px;
+          margin-bottom: 25px;
+          height: 30px;
+          border-radius: 5px;
+          border-width: 1px;
+        }
+      .pass-field {
+          font-size: 16px;
+          height: 30px;
+          border-radius: 5px;
+          border-width: 1px;
+      }
+      
+      /* Style for form label */
+      label {
+        display: block;
+        font-weight: bold;
+        margin-top: 10px;
+      }
+      
+      .form{
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      
+      /* Style for form input */
+      input[type="text"],
+      input[type="email"],
+      input[type="password"] {
+        display: block;
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+      }
+      
+      form label {
+        text-align: left;
+        padding-bottom: 5px;
+      }
+      
+      /* Style for hidden CSRF token input */
+      input[type="hidden"] {
+        display: none;
+      }
+      
+      /* Style for form help text */
+      .helptext {
+        display: block;
+        margin-top: 5px;
+        font-style: italic;
+        font-size: 12px;
+        color: #777;
+      }
+      
+      /* Style for form submit button */
+      button[type="submit"] {
+        background-color: #36393F;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin-top: 10px;
+        cursor: pointer;
+        border-radius: 4px;
+      }
+      
+      /* Style for form submit button on hover */
+      button[type="submit"]:hover {
+        background-color:  #6060A1;;
+      }
+      
+          </style>
   </head>
-<!-- create CSS design -->
-  <body style="background-color: #333333">
+
+  <body style="background-color: #36393F;">
     <div>
       <div class="top-bar"></div>
-      <div class="centered-div" class="container">
-        <form method="POST">
-          {% csrf_token %}
-          {{ login_form }}
-          <button class="btn btn-primary" type="submit">Login</button>
-        </form>
+      <section class="main">
+        <div class="centered-div" class="container">
+          {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+          <h1>Login</h1>
+          <form method="POST">
+            {% csrf_token %}
+            {{ login_form }}
+            <button class="btn btn-primary" type="submit">Login</button>
+          </form>
+  
+        </div>
 
-
-      </div>
+      </section>
+      
       
       <div class="corner-buttons">
 
