@@ -29,10 +29,10 @@
         </div>
         <div id="info">
           <h2>Info</h2>
-          <p>Name: Петър Тошев</p>
+          <p>Name: Петър Иванов</p>
           <p>Age: 30</p>
-          <p>Address: 123 Main St</p>
-          <p>Email: john@example.com</p>
+          <p>Address: Люлин 5</p>
+          <p>Email: p.ivanov@example.com</p>
         </div>
       </div>
       <div id="left-side-bottom">
@@ -46,6 +46,15 @@
       <iframe id="myIframe" src="Introduction.html" frameborder="0"></iframe>
     </div>
     <script>
+
+      let progress_var = 0.0;
+			let progress_max = 6.0;
+
+			function increment() {
+				progress_var++;
+        progress = 100 * (progress_max / progress_var);
+			}
+
       const progressBar = document.getElementById('progress-bar');
       const progressText = document.getElementById('progress-text');
       const progress = 100;
