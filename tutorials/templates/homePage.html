@@ -24,10 +24,12 @@
 				<img src="images/img_avatar.png" alt="">
 					<div class="overlay"></div>
 			</div>
-			<div id="progress-bar-container" style="text-align: center;">
-				<h2 style="font-size: small;position: relative; top: 15px;">Main progress: %</h2>
-				<div id="progress-bar" ></div>
+			<div id="progress-bar-container">
+				<div id="progress-bar"></div>
+				<div id="progress-text">0%</div>
 			</div>
+			
+			
 		</div>
 		<div id="info">
 			<h2>Info</h2>
@@ -50,9 +52,24 @@
 	</div>
 <script>
 	const progressBar = document.getElementById('progress-bar');
-	const progress = 75; 
-	progressBar.style.width = `${progress}%`;
-	console.log(progress,"%");
+const progressText = document.getElementById('progress-text');
+const progress = 100;
+progressBar.style.width = `${progress}%`;
+
+if (progress < 25) {
+  progressBar.style.backgroundColor = '#FF0000';
+} else if (progress >= 25 && progress < 50) {
+  progressBar.style.backgroundColor = '#FFA500';
+} else if (progress >= 50 && progress < 75) {
+  progressBar.style.backgroundColor = '#FFFF00';
+} else if (progress >= 75 && progress != 100) {
+  progressBar.style.backgroundColor = '#008000';
+}
+else if (progress == 100 ) { progressBar.style.backgroundColor = '#66E8DB'; }
+
+progressText.textContent = `${progress}%`;
+
+
 	</script>
 </body>
 </html>
