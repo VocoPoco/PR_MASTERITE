@@ -67,6 +67,15 @@
 				height: 25px;
 			}
 
+			.phishing {
+				font-family: arial, sans-serif;
+				color: red;
+			}
+
+			.normal {
+				font-family: arial, sans-serif;
+			}
+
 			.delete-email-button:hover {
 				background-color: #c62828;
 			}
@@ -88,7 +97,7 @@
 	<body>
 		<div class="container">
 			<h1>My Inbox</h1>
-			<div class="email">
+			<div class="email" class="normal">
 				<details>
 					<summary>
 						<div class="sender">John Doe</div>
@@ -99,7 +108,8 @@
 				<div class="date">Mar 8, 2023</div>
 				<button class="delete-email-button" onclick="deleteEmail(event)">Delete</button>
 			</div>
-			<div class="email">
+
+			<div class="email" class="normal">
 				<details>
 					<summary>
 						<div class="sender">Jane Smith</div>
@@ -110,7 +120,8 @@
 				<div class="date">Mar 7, 2023</div>
 				<button class="delete-email-button" onclick="deleteEmail(event)">Delete</button>
 			</div>
-			<div class="email">
+
+			<div class="email" class="normal">
 				<details>
 					<summary>
 						<div class="sender">Mark Johnson</div>
@@ -122,15 +133,106 @@
 				<button class="delete-email-button" onclick="deleteEmail(event)">Delete</button>
 			</div>
 			
-			<div class="email">
+			<div class="email" class="phishing">
 				<details>
 					<summary>	
 						<div class="sender">Unknown Sender</div> 
 						<div class="subject">You won a prize!</div>
 					</summary>
-					<p>This is just a filler text I have no clue what I should write here and I think that's because we lack sleep</p>
+					<p>You have won our giveaway for an Iphone 20 Pro Max Ultra!</p>
+					<a href="#" onclick="alert('You have been hacked!')" target="_blank">Click here to claim!</a>
 				</details>
 				<div class="date">Mar 5, 2023</div>
+				<button class="delete-email-button" onclick="deleteEmail(event)">Delete</button>
+			</div>
+
+			<div class="email" class="phishing">
+				<details>
+					<summary>
+						<div class="sender">Apple Support</div>
+						<div class="subject">Security Alert: Your Account Has Been Compromised</div>
+					</summary>
+					<p>Dear customer, we have detected unusual activity on your account. Please click the link below to verify your identity and secure your account.</p>
+					<a href="#" onclick="alert('You have been hacked!')" target="_blank">Verify Now</a>
+				</details>
+				<div class="date">Mar 4, 2023</div>
+				<button class="delete-email-button" onclick="deleteEmail(event)">Delete</button>
+			</div>
+			
+			<div class="email" class="normal">
+				<details>
+					<summary>
+						<div class="sender">Alex Martinez</div>
+						<div class="subject">Project Update</div>
+					</summary>
+					<p>Quick update on the project: we're on schedule, but there have been some budget changes that I want to discuss at our meeting next Tuesday, March 8th, at 10am in the conference room. Let me know if you can't attend. Thanks!</p>
+				</details>
+				<div class="date">Mar 4, 2023</div>
+				<button class="delete-email-button" onclick="deleteEmail(event)">Delete</button>
+			</div>
+
+			<div class="email" class="phishing">
+				<details>
+					<summary>
+						<div class="sender">Bank of America</div>
+						<div class="subject">Urgent: Your Account Has Been Suspended</div>
+					</summary>
+					<p>Dear customer, your account has been suspended due to suspicious activity. Please click the link below to reactivate your account and avoid any further inconvenience.</p>
+					<a href="#" onclick="alert('You have been hacked!')" target="_blank">Reactivate Now</a>
+				</details>
+				<div class="date">Mar 3, 2023</div>
+				<button class="delete-email-button" onclick="deleteEmail(event)">Delete</button>
+			</div>
+			
+			<div class="email" class="normal">
+				<details>
+					<summary>
+						<div class="sender">Sarah Smith</div>
+						<div class="subject">Quarterly Report Due</div>
+					</summary>
+					<p>Just a friendly reminder that the quarterly report is due this Friday, March 4th. Please submit your individual sections by end of day tomorrow, March 3rd. Thanks!</p>
+				</details>
+				<div class="date">Mar 2, 2023</div>
+				<button class="delete-email-button" onclick="deleteEmail(event)">Delete</button>
+			</div>
+
+			<div class="email" class="phishing">
+				<details>
+					<summary>
+						<div class="sender">Google Security Team</div>
+						<div class="subject">Security Alert: Your Account Has Been Hacked</div>
+					</summary>
+					<p>Dear user, we have detected unauthorized access to your Google account. Please click the link below to secure your account and prevent any further unauthorized access.</p>
+					<a href="#" onclick="alert('You have been hacked!')" target="_blank">Secure Now</a>
+				</details>
+				<div class="date">Mar 2, 2023</div>
+				<button class="delete-email-button" onclick="deleteEmail(event)">Delete</button>
+			</div>
+			
+			<div class="email" class="phishing">
+				<details>
+					<summary>
+						<div class="sender">Your Boss</div>
+						<div class="subject">Important: Urgent Task Assignment</div>
+					</summary>
+					<p>Dear employee, I need you to complete an urgent task by the end of the day. Please see the attached file for details.</p>
+					<a href="#" onclick="alert('You have been hacked!')" target="_blank">Download Now!</a>
+				</details>
+				<div class="date">Mar 1, 2023</div>
+				<button class="delete-email-button" onclick="deleteEmail(event)">Delete</button>
+			</div>
+
+
+			<div class="email" class="phishing">
+				<details>
+					<summary>
+						<div class="sender">Nigerian Price</div>
+						<div class="subject">In need of Money!</div>
+					</summary>
+					<p>Hello Brother! Lately a lot has been going on in my country. I need your financial help to support my country, I will repay you in about a month's time!</p>
+					<a href="#" onclick="alert('You have been hacked!')" target="_blank">Send 10,000$ here</a>
+				</details>
+				<div class="date">Feb 28, 2023</div>
 				<button class="delete-email-button" onclick="deleteEmail(event)">Delete</button>
 			</div>
 		</div>

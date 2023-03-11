@@ -142,38 +142,40 @@ width: 100%;
 #progress-text {
   position: absolute;
   top: -20px;
+<<<<<<< HEAD
   right: 0;
   color: #fff;
   font-size: 14px;
 }
 
+=======
+    right: 0;
+    color: #fff;
+    font-size: 14px;
+}
+  
+>>>>>>> 49b2f576a74b1bf7b738e25c730a33adf74869a4
 .corner-buttons {
     position: absolute;
     top: 10px;
     left: 10px;
 }
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> 49b2f576a74b1bf7b738e25c730a33adf74869a4
 .corner-buttons button {
     display: inline-block;
     width: 100px;
     height: 40px;
     margin-left: 10px;
     background-color: #36393F;
-    color:rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
     border-radius: 5px;
     border: none;
 }
-
-.corner-buttons button:first-child {
-    margin-right: 0;
-}
-
-.corner-buttons button:nth-child(n+2) {
-    transform: scaleX(-1);
-}
-
   
-
 .top-bar {
     height: 60px;
     background-color: #1F2024;
