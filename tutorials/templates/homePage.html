@@ -8,10 +8,13 @@
   <body>
     <div class="top-bar">
       <div class="corner-buttons">
-        <a href="homePage.html"><button style="background-color: #6060A1;">Home</button></a>
-        <a href="tutorial1.html"><button>Tutorial 1</button></a>
-        <a href="tutorial2.html"><button>Tutorial 2</button></a>
-        <a href="tutorial3.html"><button>Tutorial 3</button></a>
+        <button onclick="changeIframeSrc('homePage.html')">Home</button>
+        <button onclick="changeIframeSrc('tutorial1.html')">Tutorial 1</button>
+        <button onclick="changeIframeSrc('tutorial2.html')">Tutorial 2</button>
+        <button onclick="changeIframeSrc('tutorial3.html')">Tutorial 3</button>
+		<button onclick="changeIframeSrc('Malware.html')">Malware training</button>
+        <button onclick="changeIframeSrc('')"></button>
+        <button onclick="changeIframeSrc('')"></button>
       </div>
     </div>
     <div id="left-side">
@@ -41,7 +44,9 @@
         </div>
       </div>
     </div>
-    <div id="right-side"></div>
+    <div id="right-side">
+      <iframe id="myIframe" src="homePage.html" frameborder="0"></iframe>
+    </div>
     <script>
       const progressBar = document.getElementById('progress-bar');
       const progressText = document.getElementById('progress-text');
@@ -59,6 +64,11 @@
         progressBar.style.backgroundColor = '#66E8DB';
       }
       progressText.textContent = `${progress}%`;
+      
+      function changeIframeSrc(url) {
+        const iframe = document.getElementById('myIframe');
+        iframe.src = url;
+      }
     </script>
   </body>
 </html>
