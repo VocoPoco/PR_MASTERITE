@@ -24,9 +24,9 @@
 
 			.email {
 				display: flex;
-				justify-content: space-between;
 				padding: 10px;
 				border-bottom: 1px solid #ccc;
+				box-sizing: border-box;
 			}
 
 			.email:hover {
@@ -36,8 +36,8 @@
 
 			.email summary {
 				display: flex;
-				justify-content: space-between;
-				align-items: center;
+				flex-wrap: wrap;
+				align-items: baseline;
 			}
 
 			.email .sender {
@@ -45,33 +45,81 @@
 			}
 
 			.email .subject {
-				flex-grow: 1;
 				margin-left: 10px;
 			}
 
 			.email .date {
 				font-size: 0.8em;
 				color: #777;
+				margin-left: auto;
+			
 			}
+
+			.delete-email-button {
+				background-color: #f44336;
+				color: white;
+				border: none;
+				border-radius: 5px;
+				padding: 5px;
+				cursor: pointer;
+				margin-left: 10px;
+				width: 70px;
+				height: 25px;
+			}
+
+			.delete-email-button:hover {
+				background-color: #c62828;
+			}
+
+			.email details {
+				max-width: 85%;
+			}	
+			
 		</style>
+		<script>
+			function deleteEmail(event) {
+				event.stopPropagation();
+				const emailElement = event.target.parentElement;
+				emailElement.remove();
+			}
+		</script>
+
 	</head>
 	<body>
 		<div class="container">
 			<h1>My Inbox</h1>
 			<div class="email">
-				<div class="sender">John Doe</div>
-				<div class="subject">Meeting Reminder</div>
+				<details>
+					<summary>
+						<div class="sender">John Doe</div>
+						<div class="subject">Meeting Reminder</div>
+					</summary>
+					<p>Hi John, just a friendly reminder that we have a meeting tomorrow at 2pm in the conference room. Please make sure to bring your notes and any relevant documents. Looking forward to seeing you there!</p>
+				</details>
 				<div class="date">Mar 8, 2023</div>
+				<button class="delete-email-button" onclick="deleteEmail(event)">Delete</button>
 			</div>
 			<div class="email">
-				<div class="sender">Jane Smith</div>
-				<div class="subject">New Project Proposal</div>
+				<details>
+					<summary>
+						<div class="sender">Jane Smith</div>
+						<div class="subject">New Project Proposal</div>
+					</summary>
+					<p>Hi Jane, thanks for submitting your proposal for the new project. We're excited to review it and will be in touch soon with any feedback or questions. Keep up the great work!</p>
+				</details>
 				<div class="date">Mar 7, 2023</div>
+				<button class="delete-email-button" onclick="deleteEmail(event)">Delete</button>
 			</div>
 			<div class="email">
-				<div class="sender">Mark Johnson</div>
-				<div class="subject">Vacation Request</div>
+				<details>
+					<summary>
+						<div class="sender">Mark Johnson</div>
+						<div class="subject">Vacation Request</div>
+					</summary>
+					<p>Hi Mark, thanks for submitting your vacation request for the week
+			</details>
 				<div class="date">Mar 6, 2023</div>
+				<button class="delete-email-button" onclick="deleteEmail(event)">Delete</button>
 			</div>
 			
 			<div class="email">
@@ -83,7 +131,7 @@
 					<p>This is just a filler text I have no clue what I should write here and I think that's because we lack sleep</p>
 				</details>
 				<div class="date">Mar 5, 2023</div>
-			
+				<button class="delete-email-button" onclick="deleteEmail(event)">Delete</button>
 			</div>
 		</div>
 	</body>
