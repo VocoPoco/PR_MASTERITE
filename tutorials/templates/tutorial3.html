@@ -3,62 +3,59 @@
 <head>
 	<title>CyberSecT</title>
     <link rel="icon" href="Images/Logo.png">
-    <link rel="stylesheet" href="tutorialPage.css">
-	
+	<link rel="stylesheet" href="homePage.css">
+	<style>
+
+	</style>
 </head>
 <body>
-
 	<div class="top-bar">
 		<div class="corner-buttons">
 
 		  <a href="homePage.html"><button>Home</button></a>
 		  <a href="tutorial1.html"><button>Tutorial 1</button></a>
 		  <a href="tutorial2.html"><button>Tutorial 2</button></a>
-		  <a href="tutorial3.html"><button style="background-color: #6060A1;">Tutorial 3</button></a>
+		  <a href="tutorial3.html"><button    style="background-color: #6060A1;">Tutorial 3</button></a>
 
 	  </div>
-  </div>
-	<div id="left-side" style="margin-top: 60px;">
-        <div id="left-side-top">
-            <div class="container" id="profile-pic-wrapper">
-              <a href="profilepage.html" style="position: relative;"><img id="profile-pic" src="Images/SEXBOMB.jpg" alt="Profile Pic"></a>
-             
-              <div id="progress-bar-container">
-                <div id="progress-bar"></div>
-                </div>
-                <h2 style="font-size: small;">Tutorial progress: %</h2>
-              <div class="overlay"></div>
 
-                <div id="info">
-                    <h2>Info</h2>
-                    <p>Name: Corinna Koprf</p>
-                    <p>Age: 30</p>
-                    <p>Address: 123 Main St</p>
-                    <p>Email: john@example.com</p>
-                </div>
-            </div>
-        </div>
-        <div id="left-side-bottom">
-            <div id="tutorial-steps">
-              <h1>Header</h1>
-                <h2>Tutorial Steps:</h2>
+	</div>
+	<div id="left-side">
+		<div id="left-side-top">
+		<div>	
+			<div style="border-radius: 100%;" onclick="window.location='profilePage.html'" class="container">
+				<img src="images/img_avatar.png" alt="">
+					<div class="overlay"></div>
+			</div>
+			<div id="progress-bar-container" style="text-align: center;">
+				<h2 style="font-size: small;position: relative; top: 15px;">Tutorial(3) progress: %</h2>
+				<div id="progress-bar" ></div>
+			</div>
+		</div>
+		<div id="info">
+			<h2>Info</h2>
+			<p>Name: John Doe</p>
+			<p>Age: 30</p>
+			<p>Address: 123 Main St</p>
+			<p>Email: john@example.com</p>
+		</div>
+		</div>
+		<div id="left-side-bottom">
+			<div id="info">
 
-              </div>
-        </div>
-    </div>
-    
-    <div id="right-side" style="margin-top: 60px;">
-		<iframe src="" style="border: none; width: 100%; height: 100%;">
-			
-		</iframe>
-
-    </div>
-
-    </div>
-    <script>
-      const progressBar = document.getElementById('progress-bar');
-      const progress = 75; 
-      progressBar.style.width = `${progress}%`;
-      </script>
+				<h2>Sub-Info</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod nibh et dui vestibulum, vitae cursus ante pretium.</p>
+			</div>
+		</div>
+	</div>
+	
+	<div id="right-side">
+	</div>
+<script>
+	const progressBar = document.getElementById('progress-bar');
+	const progress = 75; 
+	progressBar.style.width = `${progress}%`;
+	console.log(progress,"%");
+	</script>
 </body>
 </html>
