@@ -142,29 +142,18 @@ width: 100%;
 #progress-text {
   position: absolute;
   top: -20px;
-<<<<<<< HEAD
   right: 0;
   color: #fff;
   font-size: 14px;
 }
 
-=======
-    right: 0;
-    color: #fff;
-    font-size: 14px;
-}
-  
->>>>>>> 49b2f576a74b1bf7b738e25c730a33adf74869a4
 .corner-buttons {
     position: absolute;
     top: 10px;
     left: 10px;
 }
-<<<<<<< HEAD
 
-=======
   
->>>>>>> 49b2f576a74b1bf7b738e25c730a33adf74869a4
 .corner-buttons button {
     display: inline-block;
     width: 100px;
