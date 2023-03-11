@@ -6,7 +6,11 @@ from .forms import NewUserForm
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login, authenticate
 
-
+URL_TUTORIALS = [
+    "tutorial-1",
+    "tutorial-2",
+    "tutorial-3"
+]
 
 def home(request):
   template = loader.get_template('mainLoginPage.html')
@@ -49,17 +53,17 @@ def register_request(request):
 #   return HttpResponse(template.render())
 
 def dashboard_request(request):
-  template = loader.get_template('homePage.html')
-  return HttpResponse(template.render())
+    template = loader.get_template('homePage.html')
+    return HttpResponse(template.render())
 
-def tutorial_1(request):
+def tutorial_1_request(request):
   template = loader.get_template('tutorial1.html')
   return HttpResponse(template.render())
 
-def tutorial_2(request):
+def tutorial_2_request(request):
   template = loader.get_template('tutorial2.html')
   return HttpResponse(template.render())
 
-def tutorial_3(request):
+def tutorial_3_request(request):
   template = loader.get_template('tutorial3.html')
   return HttpResponse(template.render())
