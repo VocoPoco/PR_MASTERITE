@@ -1,185 +1,189 @@
 body {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
-    background-color: #1a1a1a;
-    color: #ffffff;
-    font-family: Arial, sans-serif;
-  }
-  
-  #left-side {
-    display: flex;
-    flex-direction: column;
-    width: 25%;
-    justify-content: center;
-    align-items: center;
-    margin-top: 60px;
-    padding-top: 20px;
-    padding-left: 20px;
-    background-color: #36393F;
-  }
-  
-  #left-side-top {
-    flex: 1;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 20px;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
 }
-  
-  #profile-pic-wrapper {
-    position: relative;
-    display: inline-block;
-  }
-  
-  #profile-pic {
-    border-radius: 50%;
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    margin-bottom: 20px;
-    display: block;
-  }
-  
-  #info {
-    position: absolute;
-    top: 0;
-    left: 100%;
-    padding: 10px;
-    background-color: #333333;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-  }
-  
-  #profile-pic-wrapper:hover #info {
-    opacity: 0.5;
-  }
-  
-  #left-side-bottom {
-    display: block;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 10vh;
-  }
-  
-  #tutorial-steps {
-    background-color: #ffffff;
-    color: black;
-    padding: 25px;
-    border-radius: 15%;
-  }
-  #tutorial-steps h1 {
-    margin: 0;
-    font-size: 24px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
-    text-align: center;
-  }
-  
-  #tutorial-steps h2 {
-    margin: 0;
-    font-size: 24px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
-    text-align: center;
-  }
-  
-  #tutorial-steps p {
-    margin: 0;
-    line-height: 1.5;
-    font-size: 16px;
-    margin-bottom: 16px;
-  }
-  
-  .tutorial-button {
-    background-color: #333333;
-    color: #ffffff;
-    padding: 10px;
-    margin-bottom: 10px;
-    text-decoration: none;
-  }
-  
-  #right-side {
-    display: flex;
-    flex-direction: column;
-    width: 75%;
-    padding: 0px;
-    background-color: #ffffff;
-  }
-  #right-side {
-    display: flex;
-    flex-direction: column;
-    width: 75%;
-    padding: 0px;
-    background-color: #ffffff;
-}
-  
-  .corner-buttons {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-  }
-  
-  .corner-buttons button {
-    display: inline-block;
-    width: 100px;
-    height: 40px;
-    margin-left: 10px;
-    background-color: #36393F;
-    color:rgb(255, 255, 255);
-    border-radius: 5px;
-    border: none;
-  }
-  
-  .top-bar {
-    height: 60px;
-    background-color: #1F2024;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-  }
 
-  .container {
-    position: relative;
-    width: 200px;
-    height: 200px;
+.container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
 }
-  .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0,0,0,0.5);
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    border-radius: 100%;
-  }
-  .container:hover .overlay {
-      opacity: 1;
-  }
-  #progress-bar-container {
-    position: relative;
-    width: 100%;
-    height: 10px;
-    margin-top: 10px;
-    background-color: #333;
-  }
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 100%;
   
-  #progress-bar {
-    border-radius: 5px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%; 
-    height: 100%;
-    background-color: #4CAF50; 
-  }
+}
+.container:hover .overlay {
+  opacity: 1;
+}
+
+
+#left-side {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  padding-left: 20px;
+  background-color: #36393F;
+  margin-top: 60px;
+}
+#left-side img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  
+}
+#left-side-top {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}	
+
+#left-side-top-progress {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  
+}
+#left-side-bottom {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /*justify-content: space-between;*/
+}
+#right-side {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin-top: 60px;
+  padding: 0px;
+  background-color: #ffffff;
+}
+#info {
+  padding: 20px;
+  margin-bottom: 20px;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+#left-side-top:hover #info {
+  opacity: 1;
+}
+#info h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+#info p {
+  margin: 0;
+  line-height: 1.5;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+#progress-bar-container {
+position: relative;
+width: 100%;
+height: 10px;
+margin-top: 10px;
+background-color: #333;
+}
+
+#progress-bar {
+position: absolute;
+top: 0;
+left: 0;
+width: 0;
+height: 100%;
+border-radius: 5px;
+background-color: #4CAF50;
+transition: width 0.5s ease-in-out;
+}
+
+#progress-text {
+position: absolute;
+top: -20px;
+right: 0;
+color: #fff;
+font-size: 14px;
+}
+
+.corner-buttons {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+
+.corner-buttons button {
+  display: inline-block;
+  width: 100px;
+  height: 40px;
+  margin-left: 10px;
+  background-color: #36393F;
+  color: rgb(255, 255, 255);
+  border-radius: 5px;
+  border: none;
+}
+
+.scrollable-menu {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.scrollable-menu a {
+  display: inline-block;
+  padding: 20px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.right-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.right-buttons button {
+  margin-left: 20px;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+}
+
+#button1:hover, #button2:hover, #button3:hover, #button4:hover {
+  cursor: pointer;
+}
+
+
+iframe {
+  width: 100%;
+  height: calc(100vh - 60px);
+  border: none;
+}
+
